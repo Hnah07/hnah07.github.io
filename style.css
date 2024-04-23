@@ -1,0 +1,343 @@
+body {
+    background-color: #111215;
+    font-family: Poppins, sans-serif;
+    color:#ee609c;
+    font-size: 22px;
+}
+
+/* --------------------------------------------------VVV HEADER NAV VVV------------------------- */
+header {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#logo {
+   display: flex;
+   justify-content: left;
+   font-family: 'Metal Mania', sans-serif;
+   font-size: 150%;
+   text-decoration: none;
+   color: #ee609c;
+}
+
+.topnav > ul {    
+    display: flex;
+    justify-content: right;
+    list-style-type: none;
+    margin: 0;
+}
+
+.topnav ul li a {
+    color: #ee609c;
+    text-decoration: none;
+    margin: 10px;
+    padding: 10px;
+    font-size: 0.8em;
+    line-height: 2;
+}
+
+
+.topnav > ul li:hover {
+    background-color: #ee609c;
+    border-radius: 0.2em;
+}
+
+.topnav > ul li a:hover {
+    color: #111215;
+}
+
+@media only screen and (max-device-width: 480px) {
+    #logo {
+        font-size: 120%;
+        position: relative;
+        z-index: 100;
+    }
+    .topnav ul li a {
+        font-size: 0.5em;
+    }
+}
+
+@media (min-width: 800px) {
+    .hamburger {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 800px){
+    .topnav ul {
+        display: none;
+    }
+
+    .hamburger {
+        position: relative;
+        display: block;
+        width: 40px;
+        cursor: pointer;
+    
+        appearance: none;
+        background: none;
+        outline: none;
+        border: none;
+    }
+    
+    .hamburger .bar, .hamburger:after, .hamburger:before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: #ee609c;
+        color: #ee609c;
+        margin: 6px 0px;
+        transition: 0.4s;
+    }
+    
+    .hamburger.is-active:before {
+        transform: rotate(-45deg) translate(-8px, 6px);
+        position: relative;
+        color: #ee609c;
+        z-index: 100;
+    }
+
+    .hamburger.is-active:after {
+        transform: rotate(45deg) translate(-9px, -8px);
+        position: relative;
+        color: #ee609c;
+        z-index: 100;
+    }
+    
+    .hamburger.is-active .bar{
+        opacity: 0;
+    }
+
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding-top: 120px;
+        min-height: 100vh;
+        display: block;
+        z-index: 80;
+        background-color: #111215;
+        left: 100%;
+    }
+
+    .mobile-nav ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .mobile-nav.is-active {
+        left: 0;
+    }
+
+    .mobile-nav a {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+        text-align: center;
+        padding: 4px;
+        margin: 0px auto 16px;
+
+        background-color: #111215;
+        color: #ee609c;
+        text-decoration: none;
+    }
+
+    .mobile-nav a:hover {
+        background-color: #11121578;
+
+    }
+}
+/* --------------------------------------------------VVV CONTENT VVV------------------------- */
+
+.content h1 {
+    margin-top: 5vw;
+    margin-bottom: 0;
+}
+
+h1 {
+    color: #ee609c;
+    font-family: 'Metal Mania', sans-serif;
+    font-size: 80px;
+}
+
+.content h1, .intro, .me {
+    margin-left: 15%;
+}
+
+h2 {
+    font-family: 'Metal Mania', sans-serif;
+}
+
+.now-content h1, .now-content h2, .now-content p{
+    margin-left: 15%;
+    width: auto
+}
+
+.now-content p {
+    font-size: 0.8em;
+    width: auto;
+}
+
+.me ul {
+    list-style: none;
+}
+
+.intro {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 540px;
+}
+
+.Hannah {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 40px;
+    }
+    
+    h1, .content p, .me, .now-content {
+        margin-left: 10px;
+    }
+    
+    .intro, .me {
+        margin-top: 10px;
+        width: auto;
+        font-size: 18px;
+    }
+    
+    .Hannah {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}
+
+.reading-list {
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+    margin-left: 15%;
+    padding-right: 15%;
+    padding-left: 0;
+}
+
+.book .book-cover, .book p {
+    font-size: 12px;
+}
+
+.book {
+    padding-right: 16px;
+    max-width: 100vw;
+}
+
+.book-cover {
+    height: 200px;
+}
+
+.reading-list span {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.reading-list li {
+    list-style: none;
+}
+
+.update {
+    padding-left: 15vw;
+}
+
+@media only screen and (max-device-width: 480px) {
+    .now-content h1, .now-content h2, .now-content p, .content h1, .update {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .reading-list {
+        flex-wrap: wrap;
+        max-width: fit-content;
+        margin-left: 0;
+    }
+}
+@media (max-width: 600px) {
+    .reading-list {
+        flex-wrap: wrap;
+    }
+}
+
+/* --------------------------------------------------VVV FOOTER VVV------------------------- */
+
+#follow {
+    margin-left: 18vw;
+    padding-left: 16px;
+    margin-top: 24vh;
+    
+}
+
+.socialmedia a i{
+    color: #ee609c;
+    font-size: 2em;
+    padding: 18px;
+
+}
+
+.socialmedia a {
+    text-decoration: none;
+    
+}
+
+.socialmedia i:hover {
+    background-color: #ee609c;
+    border-radius: 0.2em; 
+
+}
+
+.socialmedia a:hover i {
+    color:#111215;
+} 
+
+.copyright p {
+    font-size: 0.8em;
+    margin: 0 0 0 20%;
+    padding-left: 12px
+}
+
+footer h2 {
+    padding-left: 18px;
+    margin-bottom: 0;
+}
+
+@media (max-width: 800px) {
+    #follow {
+        margin-left: 12%;
+    }
+    .copyright p {
+        text-align: left;
+        font-size: 0.8em;
+        margin-left: 17%;
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-device-width: 480px) {
+    #follow {
+        margin-left: 0;
+    }
+    .copyright p {
+        text-align: left;
+        font-size: 0.8em;
+        margin-top: 0;
+        margin-left: 18px;
+    }  
+}
